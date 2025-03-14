@@ -12,7 +12,14 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view("blog.index");
+        $blogs['allData'] = Blog::where("user_id", request()->user()->id)
+        ->orderBy("id", "DESC")
+        ->paginate(2);
+
+        // return view("blog.index", [
+        //     "blogs" => $blogs
+        // ]);
+        return view("blog.index",$blogs);
     }
 
     /**
