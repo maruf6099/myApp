@@ -3,7 +3,7 @@
         <!-- Create Blog Button -->
         <div class="flex justify-between items-center mb-6">
             <h2 class="text-2xl font-bold text-gray-800">📜 Blog Posts</h2>
-            <a href="#" class="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+            <a href="{{ route('blog.create') }}" class="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
                 ➕ Create New Blog
             </a>
         </div>
