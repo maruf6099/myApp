@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Posts</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 py-8">
+<x-app-layout>
     <div class="container mx-auto px-4">
         <!-- Create Blog Button -->
         <div class="flex justify-between items-center mb-6">
@@ -57,5 +49,5 @@
             <button class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg ml-2">Next</button>
         </div>
     </div>
-</body>
-</html>
+
+</x-app-layout>
