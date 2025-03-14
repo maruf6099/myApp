@@ -28,7 +28,24 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            "title" => "required|string",
+            "description" => "required|string",
+            "banner_image" => "required|image"
+        ]);
+
+        // echo "<pre>";
+        // print_r($request->all());
+
+        $data["user_id"] = request()->user()->id;
+
+        if($request->hasFile("banner_image")){
+            $data["banner_image"] = $request->file("banner_image")->store("blogs", "public");
+        }
+
+        Blog::create($data);
+
+        return to_route("blog.index")->with("success", "Blog Created Successfully");
     }
 
     /**
