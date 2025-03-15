@@ -103,6 +103,12 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+        if($blog->banner_image){
+            Storage::disk("public")->delete($blog->banner_image);
+        }
+
+        $blog->delete();
+
+        return to_route("blog.index")->with("success", "Blog Deleted Successfully");
     }
 }
