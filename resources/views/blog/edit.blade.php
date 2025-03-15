@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Blog</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100">
+<x-app-layout>
     <div class="container mx-auto px-4 py-8">
         <!-- Page Heading -->
         <div class="flex justify-between items-center mb-6">
@@ -60,5 +52,4 @@
             </form>
         </div>
     </div>
-</body>
-</html>
+</x-app-layout>

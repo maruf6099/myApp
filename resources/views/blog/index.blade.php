@@ -30,7 +30,7 @@
                         {{-- <td class="px-4 py-3 text-gray-600">{{ $value->created_at->format("d M, Y") }}</td> --}}
                         <td class="px-4 py-3 text-gray-700">{{ Str::limit($value->description, 50) }}</td>
                         <td class="px-4 py-3 flex justify-center space-x-2">
-                            <a href="#" class="px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded shadow-md hover:bg-blue-600 transition">
+                            <a href="{{ route('blog.show',$value->id) }}" class="px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded shadow-md hover:bg-blue-600 transition">
                                 👁 View
                             </a>
                             <a href="#" class="px-3 py-1 bg-yellow-500 text-white text-xs font-semibold rounded shadow-md hover:bg-yellow-600 transition">
