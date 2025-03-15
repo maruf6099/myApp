@@ -33,7 +33,7 @@
                             <a href="{{ route('blog.show',$value->id) }}" class="px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded shadow-md hover:bg-blue-600 transition">
                                 👁 View
                             </a>
-                            <a href="#" class="px-3 py-1 bg-yellow-500 text-white text-xs font-semibold rounded shadow-md hover:bg-yellow-600 transition">
+                            <a href="{{ route('blog.edit',$value) }}" class="px-3 py-1 bg-yellow-500 text-white text-xs font-semibold rounded shadow-md hover:bg-yellow-600 transition">
                                 ✏️ Edit
                             </a>
                             <button onclick="return confirm('Are you sure you want to delete this blog?')" 
